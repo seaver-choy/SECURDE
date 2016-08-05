@@ -1,86 +1,57 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
-</head><body>
-<div class="cover">
-    <jsp:include page="WEB-INF/navbar.jsp"/>
-    <div class="cover-image" style="background-image:url('resources/blankbillboard.jpg'); opacity : 0.8"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h1><font color = "black">Advertising made affordable</font></h1>
-                <p><font color = "black">Share advertisement costs with other small businesses</font></p>
-                <br>
-                <br>
-                <a class="btn btn-lg btn-default" href="search" style="background:blue"><font color = "white">Start now</font></a>
+    <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <style>
+        body {
+          background-image: url('resources/graduatebackground.jpg');
+          position: fixed;
+          width: 100%;
+          height: 95%;
+          left: 0;
+          top: 0;
+          z-index: 10;
+        }
+
+        h2 {
+          color: #f3e5f5;
+        }
+
+        .layer {
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 110%;
+        }
+
+
+      </style>
+</head>
+<body>
+    <div class = "layer">
+          <nav class = "transparent">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo" style="padding-left: 6px;">Logo</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="sass.html">Login</a></li>
+                <li><a href="badges.html">Register</a></li>
+              </ul>
             </div>
+          </nav>
+          <div class="valign-wrapper" style="height: 90%; width: 100%">
+            <h2 class="valign center-block">Please pass us!</h2>
+          </div>
         </div>
-    </div>
-</div>
-<div class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
-            </div>
-            <div class="col-md-6">
-                <h1>A title</h1>
-                <h3>A subtitle</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                    ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-                    dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-                    nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                    Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-                    enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-                    felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-                    elementum semper nisi.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
-                <h2>A Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisici elit,
-                    <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
-                    <br>Ut enim ad minim veniam, quis nostrud</p>
-            </div>
-            <div class="col-md-4">
-                <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
-                <h2>A title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisici elit,
-                    <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
-                    <br>Ut enim ad minim veniam, quis nostrud</p>
-            </div>
-            <div class="col-md-4">
-                <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
-                <h2>A title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisici elit,
-                    <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
-                    <br>Ut enim ad minim veniam, quis nostrud</p>
-            </div>
-        </div>
-    </div>
-</div>
-<jsp:include page="WEB-INF/footer.html"/>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>

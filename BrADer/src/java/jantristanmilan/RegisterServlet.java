@@ -40,7 +40,15 @@ public class RegisterServlet extends HttpServlet {
             System.out.println(DatabaseUtilities.getConnection("ptf_brad"));
             
             User user = new User();
-            BeanUtilities.populate(user, request);
+            //BeanUtilities.populate(user, request);
+            
+            user.setUsername(request.getParameter("username"));
+            user.setPassword(request.getParameter("password"));
+            user.setFirstName(request.getParameter("firstName"));
+            user.setLastName(request.getParameter("lastName"));
+            user.setEmail(request.getParameter("email"));
+                    
+            
             UserDAO userDAO = new MySQLUserDAO();
             userDAO.create(user);
 
