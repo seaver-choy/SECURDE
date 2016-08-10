@@ -1,0 +1,5 @@
+Time Stamp: 2016/08/10-22:15:04:342
+Log ID: 20160810_22-15-04-358_ProdMngr
+Log From: Account ID #2
+Log Type: Delete 5
+Details: Deleted 5 from the product list.
