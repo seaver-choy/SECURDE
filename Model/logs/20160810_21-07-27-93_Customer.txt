@@ -1,5 +1,0 @@
-Time Stamp: 2016/08/10-21:07:27:93
-Log ID: 20160810_21-07-27-93_Customer
-Log From: Account ID #0
-Log Type: Add Customer
-Details: Added saintPeter as Customer.

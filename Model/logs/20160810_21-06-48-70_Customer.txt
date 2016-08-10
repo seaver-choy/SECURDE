@@ -1,5 +1,0 @@
-Time Stamp: 2016/08/10-21:06:48:70
-Log ID: 20160810_21-06-48-70_Customer
-Log From: Account ID #0
-Log Type: Add null
-Details: Added saintPeter as null.
