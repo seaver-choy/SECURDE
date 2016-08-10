@@ -16,15 +16,15 @@
 <jsp:include page="navbar.jsp"/>
 <div class="section">
     <div class="container">
-        <% if (request.getParameter("username") != null) { %>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="alert alert-dismissable alert-success" contenteditable="true">
-                    <b>Account successfully created! Please login to continue.</b>
+            <% if (request.getParameter("username") != null) { %>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-dismissable alert-success" contenteditable="true">
+                        <b>Account successfully created! Please login to continue.</b>
+                    </div>
                 </div>
             </div>
-        </div>
-        <% } %>
+            <% } %>
         <div class="row">
             <div class="col-md-12">
                 <form role="form" action="login" method="post" data-toggle="validator">

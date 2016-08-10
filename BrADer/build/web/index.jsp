@@ -43,7 +43,7 @@
               <a href="#" class="brand-logo" style="padding-left: 6px;">Logo</a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="sass.html">Login</a></li>
-                <li><a href="badges.html">Register</a></li>
+                <li><a href="register">Register</a></li>
               </ul>
             </div>
           </nav>
