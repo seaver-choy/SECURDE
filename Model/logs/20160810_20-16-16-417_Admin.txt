@@ -1,0 +1,5 @@
+Time Stamp: 2016/08/10-20:16:16:416
+Log ID: 20160810_20-16-16-417_Admin
+Log From: Account ID #1
+Log Type: Add Product Manager
+Details: Added productMan as Product Manager.
