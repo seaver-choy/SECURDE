@@ -1,0 +1,5 @@
+Time Stamp: 2016/08/10-20:16:16:551
+Log ID: 20160810_20-16-16-551_Admin
+Log From: Account ID #1
+Log Type: Add Customer
+Details: Added pedroSan as Customer.

@@ -1,0 +1,5 @@
+Time Stamp: 2016/08/10-21:36:44:958
+Log ID: 20160810_21-36-44-959_Customer
+Log From: Account ID #0
+Log Type: Add Customer
+Details: Added boyHentai as Customer.

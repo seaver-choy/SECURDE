@@ -1,0 +1,5 @@
+Time Stamp: 2016/08/10-22:12:54:979
+Log ID: 20160810_22-12-54-979_Admin
+Log From: Account ID #1
+Log Type: Delete 4
+Details: Deleted 4 from the administrators list.
