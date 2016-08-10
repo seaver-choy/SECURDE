@@ -1,5 +1,0 @@
-Time Stamp: 2016/08/10-22:13:51:341
-Log ID: 20160810_22-13-51-341_ProdMngr
-Log From: Account ID #2
-Log Type: Add Product
-Details: Added Bota to the products list.

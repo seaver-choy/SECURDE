@@ -1,5 +1,0 @@
-Time Stamp: 2016/08/10-20:16:16:852
-Log ID: 20160810_20-16-16-852_ProdMngr
-Log From: Account ID #2
-Log Type: Add Product
-Details: Added Sandalias to the products list.
