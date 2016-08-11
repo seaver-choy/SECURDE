@@ -17,72 +17,6 @@ import object.Product;
 import object.Review;
 
 public class TestCustomerModel {
-    public static boolean addCustomer(Account customer){
-        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SS");
-        DateFormat idFormat = new SimpleDateFormat("yyyyMMdd_HH-mm-ss-SS");
-        String datetime = dateFormat.format(new Date());
-        String id = idFormat.format(new Date());
-        
-        if(!checkIfExists(customer)){
-            try {
-                Connection conn = MySQLConnector.getConnection();
-                PreparedStatement statement = null;
-                String query = "INSERT INTO accounts(username, password, role, name, email, shipping_address, billing_address) VALUES(?,?,?,?,?,?,?);";
-               
-                conn.setAutoCommit(false);
-                statement = conn.prepareStatement(query);
-                statement.setString(1, customer.getUsername());
-                statement.setString(2, customer.getPassword());
-                statement.setString(3, customer.getRole());
-                statement.setString(4, customer.getName());
-                statement.setString(5, customer.getEmail());
-                statement.setString(6, customer.getShipping_address());
-                statement.setString(7, customer.getBilling_address());
-                statement.execute();                              
-                conn.commit();               
-            } catch (SQLException ex) {
-                Logger.getLogger(TestCustomerModel.class.getName()).log(Level.SEVERE, null, ex);
-            } 
-            
-            Log log = new Log(id + "_Customer", 0,
-                              "Add " + customer.getRole(),
-                              "Added " + customer.getUsername() + " as " + customer.getRole() + ".", 
-                              datetime);
-            log.writeLog();
-            
-            return true;
-        } return false;
-    }
-    
-    public static Account getCustomer(String username, String password){
-        Account customer = null;
-        
-        try {
-            Connection conn = MySQLConnector.getConnection();
-            PreparedStatement statement = null;
-            String query = "SELECT * FROM accounts WHERE username = ? AND password = ? AND role = 'Customer';";
-            
-            conn.setAutoCommit(false);
-            statement = conn.prepareStatement(query);
-            statement.setString(1, username);
-            statement.setString(2, password);
-            ResultSet rsList = statement.executeQuery();
-            conn.commit();
-            
-            if(rsList.next()) {
-                customer = new Account(rsList.getInt("account_id"),
-                                 rsList.getString("username"),
-                                 rsList.getString("password"),
-                                 rsList.getString("name"),
-                                 rsList.getString("email"),
-                                 rsList.getString("shipping_address"),
-                                 rsList.getString("billing_address"));    
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(TestCustomerModel.class.getName()).log(Level.SEVERE, null, ex);
-        } return customer;
-    }
-    
     public static void updateCustomer(int customer_id, Account customer){
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SS");
         DateFormat idFormat = new SimpleDateFormat("yyyyMMdd_HH-mm-ss-SS");
@@ -280,27 +214,6 @@ public class TestCustomerModel {
             }
         } catch (SQLException ex) {
             Logger.getLogger(TestCustomerModel.class.getName()).log(Level.SEVERE, null, ex);
-        } return false;
-    }
-    
-    private static boolean checkIfExists(Account customer){
-        try {
-            Connection conn = MySQLConnector.getConnection();
-            PreparedStatement statement = null;
-            String query = "SELECT * FROM accounts WHERE username = ? OR email = ? AND role = 'Customer';";
-            
-            conn.setAutoCommit(false);
-            statement = conn.prepareStatement(query);
-            statement.setString(1, customer.getUsername());
-            statement.setString(2, customer.getEmail());
-            ResultSet rsList = statement.executeQuery();
-            conn.commit();
-            
-            if(rsList.next()) {
-                return true;
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(TestAdminModel.class.getName()).log(Level.SEVERE, null, ex);
         } return false;
     }
 }

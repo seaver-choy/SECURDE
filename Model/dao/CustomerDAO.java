@@ -6,7 +6,6 @@ import object.Product;
 import object.Review;
 
 public interface CustomerDAO {
-    public boolean addCustomer(Account account);
     public void updateCustomer(int customer_id, Account account);
     public ArrayList<Product> getAllProducts();
     public ArrayList<Review> getProductReviews(int product_id);
