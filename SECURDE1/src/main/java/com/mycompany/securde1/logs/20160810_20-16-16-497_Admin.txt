@@ -1,0 +1,5 @@
+Time Stamp: 2016/08/10-20:16:16:497
+Log ID: 20160810_20-16-16-497_Admin
+Log From: Account ID #1
+Log Type: Add Accounting Manager
+Details: Added accountMan as Accounting Manager.

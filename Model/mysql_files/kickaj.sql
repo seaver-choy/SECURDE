@@ -31,6 +31,7 @@ CREATE TABLE `accounts` (
   `email` varchar(100) NOT NULL,
   `billing_address` text,
   `shipping_address` text,
+  enabled TINYINT NOT NULL DEFAULT 1 ,
   PRIMARY KEY (`account_id`),
   UNIQUE KEY `account_id_UNIQUE` (`account_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
@@ -42,7 +43,7 @@ CREATE TABLE `accounts` (
 
 LOCK TABLES `accounts` WRITE;
 /*!40000 ALTER TABLE `accounts` DISABLE KEYS */;
-INSERT INTO `accounts` VALUES (1,'admin','admin','Administrator','Jesus Christ','admin.admin@gmail.com',NULL,NULL),(2,'productMan','1234','Product Manager','Yaweh','product.manager@gmail.com',NULL,NULL),(3,'accountMan','1234','Accounting Manager','Messiah','accounting.manager@gmail.com',NULL,NULL),(5,'boyHentai','6969','Customer','Angelo Matias','Dix4Lunch@gmail.com','kay mama','sa bahay');
+INSERT INTO `accounts` VALUES (1,'admin','admin','ROLE_ADMIN','Jesus Christ','admin.admin@gmail.com',NULL,NULL, '1'),(2,'productMan','1234','ROLE_PRODMAN','Yaweh','product.manager@gmail.com',NULL,NULL,'1'),(3,'accountMan','1234','ROLE_ACCMAN','Messiah','accounting.manager@gmail.com',NULL,NULL,'1'),(5,'boyHentai','6969','ROLE_CUST','Angelo Matias','Dix4Lunch@gmail.com','kay mama','sa bahay','1');
 /*!40000 ALTER TABLE `accounts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -59,6 +60,7 @@ CREATE TABLE `products` (
   `category` varchar(100) NOT NULL,
   `details` text NOT NULL,
   `price` float NOT NULL,
+  `img_name` text,
   PRIMARY KEY (`product_id`),
   UNIQUE KEY `product_id_UNIQUE` (`product_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
@@ -70,7 +72,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Tsinelas','Slippers','kewl slippers',10),(2,'Sandalias','Sandals','kewl sandals',15),(3,'Sapatos','Shoes','kewl shoes',20),(4,'Bota','Boots','kewl boots',25),(6,'Crocs','Sandals','shit sandals',0.01);
+INSERT INTO `products` VALUES (1,'Tsinelas','Slippers','kewl slippers',10, 'shoe1'),(2,'Sandalias','Sandals','kewl sandals',15, 'shoe2'),(3,'Sapatos','Shoes','kewl shoes',20, 'shoe3'),(4,'Bota','Boots','kewl boots',25, 'shoe4'),(6,'Crocs','Sandals','shit sandals',0.01, 'shoe5');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
